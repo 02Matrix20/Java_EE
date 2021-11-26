@@ -1,5 +1,0 @@
-package ejd3_2_components;
-
-public interface Doctor {
-
-}

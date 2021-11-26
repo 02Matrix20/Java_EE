@@ -1,5 +1,0 @@
-package ejb3_2_components;
-
-public class MailerBean {
-
-}

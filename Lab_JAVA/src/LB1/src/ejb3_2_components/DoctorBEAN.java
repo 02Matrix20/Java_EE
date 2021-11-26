@@ -15,8 +15,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 
 import ejb3_2_components.Doctor;
- 
+@Singleton 
 @Stateful
+@Lock(LockType.WRITE)
 @StatefulTimeout(unit = TimeUnit.MINUTES, value = 20)
 public class DoctorBEAN implements Doctor {
  
@@ -50,3 +51,5 @@ public class DoctorBEAN implements Doctor {
     	doctor = null;
     }
 }
+
+

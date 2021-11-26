@@ -25,6 +25,17 @@ public class DoctorValidation {
 	      "{3}(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\]?)|(?:[a-zA-Z0-9-]+\\.)" +
 	      "+(?:[a-zA-Z]){2,}\\.?)$",
 	      message = "заданный email не может существовать!!!")
+	  
+	  @ReportAsSingleViolation
+	  @Constraint(validatedBy = {})
+	  @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER})
+	  @Retention(RetentionPolicy.RUNTIME)
+	  public @interface Email{
+	  String message() default "Invalid email";
+	  Class<?>[] groups() default {};
+	  Class<? extends Payload>[] payload() default {};
+	  }
+
 	  String email;
 	  @Min(value = 18, message = "Age should not be less than 18")
 	    @Max(value = 150, message = "Age should not be greater than 150")
