@@ -41,6 +41,10 @@
                 <h:commandButton action="#{doctorBean.deleteDoctorById(doctor.id)}" value="Delete" styleClass="btn btn-danger" />
             </h:column>
         </h:dataTable>
+        Select a type:<br/><br/>
+            <f:selectItem itemValue = "doctor's appointment" itemLabel = "doctor's appointment" />
+            <f:selectItem itemValue = "appointment"  itemLabel = "appointment" />
+        <br/><br/>
         <center><h:commandButton action="newDoctor.xhtml?faces-redirect=true" value="Add New Doctor" styleClass="btn btn-success btnSpace" /></center>
     </h:form>
 </h:body>
