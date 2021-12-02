@@ -28,7 +28,7 @@ public class MainBean
  
     
     public String checkLogin(){
-        if(login.equalsIgnoreCase("alex") && password.equalsIgnoreCase("qwerty")){
+        if(login.equalsIgnoreCase("matrix") && password.equalsIgnoreCase("qwerty")){
 	        return "loginsuccess?faces-redirect=true";
         } else {
 	        return "loginfailed?faces-redirect=true";
