@@ -16,12 +16,12 @@ public class SetSessionServlet extends HttpServlet {
 	         
 	        HttpSession session = request.getSession();
 	        Person max = (Person) session.getAttribute("person");
-	        session.setMaxInactiveInterval(-1);// до закрытия браузера
+	        session.setMaxInactiveInterval(-1);// пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	        PrintWriter out = response.getWriter();
 	        try {
 	            if(max == null) {
 	 
-	                max = new Person("Maxim", 19);
+	                max = new Person("Bogdan", 20);
 	                session.setAttribute("person", max);
 	                out.println("Session data are set");
 	            }

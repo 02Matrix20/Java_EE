@@ -19,7 +19,7 @@ public class SetCookieServlet extends HttpServlet {
          
         PrintWriter out = response.getWriter();
         try {
-            response.addCookie(new Cookie("user", "Maxim"));
+            response.addCookie(new Cookie("user", "Bogdan"));
             out.println("Cookie is set");
         }
         finally {
